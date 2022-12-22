@@ -2,7 +2,7 @@ let nextQuestion = 0;
 let maxAmount = 10;
 let questionAmount = 1
 const quizApi = `https://opentdb.com/api.php?amount=${maxAmount}&category=18&encode=url3986`
-let IC = [];
+let IC;
 let score = 0;
 let q, correct_answer,questions;
 
@@ -80,9 +80,9 @@ function gameOver() {
     let gameOverText = document.querySelector('.container');
     gameOverText.style.fontSize = '3rem';
     if(score >= 5) {
-        gameOverText.textContent = `Good job, Your Score: ${score} out of ${maxAmount}`;
+        gameOverText.textContent = `Good job, Your Score: ${score} / ${maxAmount}`;
     }else {
-        gameOverText.textContent = `Better luck next time, Your Score: ${score} out of ${maxAmount}`;
+        gameOverText.textContent = `Better luck next time, Your Score: ${score} / ${maxAmount}`;
         
     }
 }
